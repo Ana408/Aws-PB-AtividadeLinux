@@ -93,26 +93,7 @@ Passo 3. Criação de um script de validação para o serviço Apache:
 2. Criar o arquivo do script  dentro desse diretório que  utilize um editor nano para criar o arquivo “.sh”
     nano check_apache.sh
 
-3. Adicione o seguinte código ao script criado:
-
-# Diretório onde os relatórios serão salvos
-relatorio_dir="/home/ec2-user/anakarine/nfs"
-# Nome do serviço
-servico="Apache"
-# Verifica se o Apache está ativo
-if systemctl is-active --quiet httpd; then
-    status="Online"
-    arquivo_saida="$relatorio_dir/servico_online.txt"
-else
-    status="Offline"
-    arquivo_saida="$relatorio_dir/servico_offline.txt"
-fi
-# Obtém a data e hora atual
-data_hora=$(date '+%Y-%m-%d %H:%M:%S')
-# Cria a mensagem completa
-mensagem_completa="$data_hora - $servico - Status: $status"
-# Escreve a mensagem no arquivo de saída
-echo "$mensagem_completa" >> "$arquivo_saida"
+3. Adicione o seguinte código ao script criado: (arquivo no repositório)
 
 4. Torne o script executável:
     chmod +x /caminho/do/seu/diretorio/nfs/nome do arquivo
