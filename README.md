@@ -112,8 +112,8 @@ Abre o editor para consultar os documentos
 Adicione a seguinte linha ao seu arquivo crontab para executar o script a cada 5 minutos:
 */5 * * * * /bin/sh /home/ec2-user/nomedoarquivo
 
-3.Finalize o arquivo cron.
-Para digitar no arquivo cron, pressione a tecla A, após terminar a edição, pressione ESC e depois dê : e digite wq e pressione ENTER.
+ 3.Finalize o arquivo cron.
+	Para digitar no arquivo cron, pressione a tecla A, após terminar a edição, pressione ESC e depois dê : e digite wq e pressione ENTER.
 Agora, o script será executado de forma automatizada a cada intervalo de 5 minutos.
 Ele fará uma verificação do status do serviço Apache e vai registrar o resultado em dois arquivos: servico_online.txt e servico_offline.txt
 
