@@ -44,28 +44,28 @@ Utilizei o  pacote `nfs-utils` que é necessário para usar o NFS. Instalei com 
  Para compartilhar o diretório `/var/nfs_share` com permissão de leitura e gravação para todos os clientes NFS:
      /var/nfs_share *(rw,sync,no_root_squash)
 
-9.Criar um diretório dentro do filesystem do NFS com nome do usuário:
-Com o comando mkdir para criar um diretório dentro do filesystem do NFS. 
+9. Criar um diretório dentro do filesystem do NFS com nome do usuário:
+	Com o comando mkdir para criar um diretório dentro do filesystem do NFS. 
    mkdir /caminho/do/seu/diretorio/seu_nome
 
-10.Em seguida, configure as exportações do NFS no arquivo /etc/exports.  
- Adicione uma linha para compartilhar o diretório. Após adicionar a linha, pressione CTRL+O e ENTER para salvar e depois CTRL+X para sair do arquivo.
+10. Em seguida, configure as exportações do NFS no arquivo /etc/exports.  
+	 Adicione uma linha para compartilhar o diretório. Após adicionar a linha, pressione CTRL+O e ENTER para salvar e depois CTRL+X para sair do arquivo.
     /caminho/do/seu/diretorio *(rw,sync,no_root_squash
 
 11. Habilitar o Serviço Portmapper:
-O serviço Portmapper é para o funcionamento do NFS. No caso, é necessário que ele esteja habilitado e em execução:
+	O serviço Portmapper é para o funcionamento do NFS. No caso, é necessário que ele esteja habilitado e em execução:
     systemctl enable rpcbind
     systemctl start rpcbin
 
 12. Aplicar as Configurações de Exportação:
-Após editar o arquivo `/etc/exports`, aplique as novas configurações de exportação executando o seguinte comando:
-   exportfs -a
+	Após editar o arquivo `/etc/exports`, aplique as novas configurações de exportação executando o seguinte comando:
+   			exportfs -a
 
 Parte 2 - Para instalar o servidor web Apache 2 no Amazon Linux 2, 
 
 1. Atualize o Sistema:
 Execute o seguinte comando para atualizar os repositórios de pacotes e atualizar o sistema:
-    yum update -y
+   			 yum update -y
   
 2. Instale o Apache 2:
 Instalei com o nome do pacote do Apache (‘httpd’) da instância. Executei o comando para iniciar a instalação:
@@ -112,7 +112,7 @@ Abre o editor para consultar os documentos
 Adicione a seguinte linha ao seu arquivo crontab para executar o script a cada 5 minutos:
 */5 * * * * /bin/sh /home/ec2-user/nomedoarquivo
 
- 3.Finalize o arquivo cron:
+ 3. Finalize o arquivo cron:
  
 	Para digitar no arquivo cron, pressione a tecla A, após terminar a edição, pressione ESC e depois dê : e digite wq e pressione ENTER.
 Agora, o script será executado de forma automatizada a cada intervalo de 5 minutos.
