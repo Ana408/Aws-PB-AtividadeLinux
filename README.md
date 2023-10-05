@@ -85,7 +85,7 @@ Para garantir que o Apache seja iniciado automaticamente sempre que a instância
 
 *****Verifique se o status é "ativo (running)". 
 
-Passo 3. Criação de um script de validação para o serviço Apache:
+Passo 3. Criação de um script de validação para o serviço Apache: (PDF no repositório)
 
 1. Crie um diretório onde você deseja armazenar o script e os relatórios:
  	- mkdir -p /caminho/do/seu/diretorio/nfs
